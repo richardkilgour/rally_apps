@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Release_Grid</title>
+
+    <script type="text/javascript" src="/apps/2.0rc3/sdk.js"></script>
+
+    <script type="text/javascript">
+        Rally.onReady(function () {
+                Ext.define('CustomApp', {
+    extend: 'Rally.app.App',
+    componentCls: 'app',
+
+    launch: function() {
+
+        this.featureCardBoard = this.add({
+            xtype: 'rallycardboard',
+            types: ['portfolioItem/Feature'],
+            attribute: 'Release',
+            cardConfig: {
+                xtype: 'rallycard',
+                fields: ['Name']
+            }
+        });
+        
+        
+    }
+
+});
+
+
+            Rally.launchApp('CustomApp', {
+                name:"Release_Grid",
+	            parentRepos:""
+            });
+
+        });
+    </script>
+
+
+    <style type="text/css">
+        .app {
+  /* Add app styles here */
+}
+
+    </style>
+</head>
+<body>
+</body>
+</html>
